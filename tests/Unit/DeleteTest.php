@@ -7,18 +7,17 @@ use Illuminate\Foundation\Testing\WithFaker;
 use Illuminate\Foundation\Testing\RefreshDatabase;
 use App\User;
 
-class UpdateTest extends TestCase
+class DeleteTest extends TestCase
 {
     /**
      * A basic test example.
      *
      * @return void
      */
-    public function testUpdate()
+    public function testExample()
     {
-        $update= User::find(25);
-            $update->name='Steve Smith';
-            $update->save();
-        $this->assertDatabaseHas('users',["name" => 'Steve Smith']);
+        $del =User:: find(10);
+        $del->delete();
+        $this->assertDatabaseMissing('users',["name"=>$del->name]);
     }
 }
