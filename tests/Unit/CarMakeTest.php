@@ -14,10 +14,11 @@ class CarMakeTest extends TestCase
      *
      * @return void
      */
-    public function testExample()
+   public function testExample()
     {
         $make=car::find(25);
         $find=$make->make;
         $this->assertContains($find,['ford','honda','toyota']);
     }
 }
+
