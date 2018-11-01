@@ -70,10 +70,7 @@
 </head>
 <body>
 <div class="flex-center position-ref full-height">
-    <div class="top-left links">
-        <a href="{{ url('/about') }}">About</a>
-        <a href="{{ url('/contact') }}">Contact</a>
-    </div>
+
     <div class="top-right links">
         @if (Route::has('login'))
 
@@ -89,6 +86,11 @@
             @endauth
     </div>
     @endif
+
+    <div class="top-left links">
+        <a href="{{ url('/about') }}">About</a>
+        <a href="{{ url('/contact') }}">Contact</a>
+    </div>
 
     <div class="content">
         <div class="title m-b-md">
