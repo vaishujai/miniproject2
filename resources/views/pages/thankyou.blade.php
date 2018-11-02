@@ -2,7 +2,7 @@
 
 @section('content')
 
-    echo '<br><br>'
+    <br><br>
     <h1>Thank you:{{$name}}</h1>
 
 @endsection
